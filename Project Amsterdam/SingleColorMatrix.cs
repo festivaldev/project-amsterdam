@@ -46,6 +46,11 @@ namespace Amsterdam
 
         public int GetPixelSize() => Definition.PixelSize;
 
+        public void InvalidateMatrix() {
+            Pixels.ForEach(p => p.Invalidated = true);
+            Invalidate();
+        }
+
         public void ResetMatrix() {
             var Index = 0;
             for (var c = 0; c < Definition.MatrixSize.Width; c++) {
@@ -75,13 +80,6 @@ namespace Amsterdam
                 e.Graphics.ResetTransform();
                 RotationMatrix.Dispose();
             } catch { }
-        }
-
-        public void SetPixelState(int c, int r, bool active) {
-            var Pixel = Pixels.Find(p => p.Position == new Point(c, r));
-            Pixel.Active = active;
-            Pixel.Invalidated = true;
-            Invalidate();
         }
     }
 }

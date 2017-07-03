@@ -5,9 +5,9 @@ using Amsterdam.Text;
 
 namespace Project_Amsterdam_Tester
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1() {
+        public MainWindow() {
             InitializeComponent();
 
             var Definition = new SingleColorMatrixDefinition {
@@ -21,12 +21,12 @@ namespace Project_Amsterdam_Tester
                 StrokePen = new Pen(Color.Black, 1F)
             };
 
-            singleColorMatrix1.ApplyDefinition(Definition);
+            scmMatrix.ApplyDefinition(Definition);
 
-            singleColorMatrix1.Controller.CharacterSet = CharacterSet.FromJson(@"C:\Projekte\Project Amsterdam\version2.json");
+            scmMatrix.Controller.CharacterSet = CharacterSet.FromJson(@"C:\Projekte\Project Amsterdam\version2.json");
 
-            singleColorMatrix1.Controller.DrawString("Project Amsterdam 2", 1, new TextFormat { HAlign = TextFormat.HorizontalAlign.Center });
-            singleColorMatrix1.Controller.DrawString("festival.ml", 2, new TextFormat { HAlign = TextFormat.HorizontalAlign.Center });
+            scmMatrix.Controller.DrawString("Project Amsterdam", 1, new TextFormat { HAlign = TextFormat.HorizontalAlign.Center });
+            scmMatrix.Controller.DrawString("festival.ml", 2, new TextFormat { HAlign = TextFormat.HorizontalAlign.Center });
         }
     }
 }

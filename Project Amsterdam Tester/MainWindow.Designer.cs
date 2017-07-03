@@ -1,6 +1,6 @@
 ﻿namespace Project_Amsterdam_Tester
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -25,33 +25,33 @@
         /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
         /// </summary>
         private void InitializeComponent() {
-            this.singleColorMatrix1 = new Amsterdam.SingleColorMatrix();
+            this.scmMatrix = new Amsterdam.SingleColorMatrix();
             this.SuspendLayout();
             // 
-            // singleColorMatrix1
+            // scmMatrix
             // 
-            this.singleColorMatrix1.Location = new System.Drawing.Point(91, 128);
-            this.singleColorMatrix1.Name = "singleColorMatrix1";
-            this.singleColorMatrix1.Size = new System.Drawing.Size(1402, 130);
-            this.singleColorMatrix1.TabIndex = 0;
-            this.singleColorMatrix1.Text = "singleColorMatrix1";
+            this.scmMatrix.Location = new System.Drawing.Point(91, 128);
+            this.scmMatrix.Name = "scmMatrix";
+            this.scmMatrix.Size = new System.Drawing.Size(1402, 130);
+            this.scmMatrix.TabIndex = 0;
+            this.scmMatrix.Text = "scmMatrix";
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1584, 427);
-            this.Controls.Add(this.singleColorMatrix1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.scmMatrix);
+            this.Name = "MainWindow";
+            this.Text = "MainWindow";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Amsterdam.SingleColorMatrix singleColorMatrix1;
+        private Amsterdam.SingleColorMatrix scmMatrix;
     }
 }
 
